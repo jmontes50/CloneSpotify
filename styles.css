@@ -26,7 +26,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 /* estilos generales, selectores de etiqueta */
 body {
@@ -47,8 +47,8 @@ h5{
 /* ::-webkit-scrollbar-track{
   background: #1db954;
 } */
-
-.busquedas{
+/* , y */
+.busquedas, .explorar{
   padding:40px;
   display:flex;
   flex-direction: column;
@@ -86,7 +86,10 @@ h5{
   position: absolute;
   top:170px;
   right:20px;
-  display:none;
+  opacity: 0;
+  /* display:none; */
+  transition-property: all;
+  transition-duration: 0.5s;
 }
 
 .tarjeta:hover{
@@ -94,23 +97,81 @@ h5{
 }
 
 .tarjeta:hover .play-tarjeta{
-  display:block;
+  /* display:block; */
+  opacity: 1;
 }
 
 /* grid */
 .grid-explorar{
   display:grid;
-  grid-template-columns: repeat(6, minmax(250px, 1fr));
-  grid-template-rows: repeat(2, 300px);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* grid-template-rows: repeat(2, 250px); */
   gap:20px;
 }
+
+/* @media screen and (max-width:1200px) {
+  .grid-explorar{
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
+    grid-template-rows: repeat(4, 250px);
+  }
+} */
 
 .tarjeta-explora{
   padding: 20px;
   overflow: hidden; /* todo lo que sobre desaparece */
+  border-radius:10px;
+  height:250px;
 }
 
 .img-tarjeta-explora{
   width:150px;
   transform: translate(120px, 120px) rotate(30deg);
+}
+
+.tarjeta-explora:nth-of-type(1){
+  background-color: var(--genre-color01);
+}
+
+.tarjeta-explora:nth-of-type(2){
+  background-color: var(--genre-color03);
+}
+
+.tarjeta-explora:nth-of-type(3){
+  background-color: var(--genre-color05);
+}
+
+.tarjeta-explora:nth-of-type(4){
+  background-color: var(--genre-color07);
+}
+
+.tarjeta-explora:nth-of-type(5){
+  background-color: var(--genre-color01);
+}
+
+.tarjeta-explora:nth-of-type(6){
+  background-color: var(--genre-color10);
+}
+
+.tarjeta-explora:nth-of-type(7){
+  background-color: var(--genre-color02);
+}
+
+.tarjeta-explora:nth-of-type(8){
+  background-color: var(--genre-color12);
+}
+
+.tarjeta-explora:nth-of-type(9){
+  background-color: var(--genre-color09);
+}
+
+.tarjeta-explora:nth-of-type(10){
+  background-color: var(--genre-color11);
+}
+
+.tarjeta-explora:nth-of-type(11){
+  background-color: var(--genre-color03);
+}
+
+.tarjeta-explora:nth-of-type(12){
+  background-color: var(--genre-color05);
 }
