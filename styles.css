@@ -1,9 +1,11 @@
 /* Variables */
 :root {
+  /* --NOMBREVAR: VALOR */
   --primary-color: #1db954;
   --secondary-color-01: #000000;
   --secondary-color-02: #191414;
-  --secondary-color-03: #ffffff;
+  --secondary-color-03: #505050;
+  --secondary-color-04: #ffffff;
 
   --genre-color01: #55a891;
   --genre-color02: #27856a;
@@ -18,4 +20,70 @@
   --genre-color11: #e8115b;
   --genre-color12: #e13300;
   --genre-color013: #ba5d07;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+/* estilos generales, selectores de etiqueta */
+body {
+  background-color: var(--secondary-color-01);
+  color: var(--secondary-color-04);
+  font-family: "Monteserrat", sans-serif;
+}
+
+h5{
+  color:gray;
+}
+
+.busquedas{
+  padding:40px;
+  display:flex;
+  flex-direction: column;
+  gap:30px;
+}
+
+.tarjetas-busquedas {
+  display: flex;
+  gap:20px;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+}
+
+.tarjeta {
+  background-color: var(--secondary-color-02);
+  width: 250px;
+  height: 350px;
+  padding:15px;
+  border-radius:10px;
+  position: relative;
+  flex-shrink: 0; /* hace q mis tarjeta no se encojan*/
+  display:flex;
+  flex-direction: column;
+  gap:5px;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+
+.ellipse-tarjeta{
+  width:100%;
+}
+
+.play-tarjeta {
+  width: 50px;
+  position: absolute;
+  top:170px;
+  right:20px;
+  display:none;
+}
+
+.tarjeta:hover{
+  background: var(--secondary-color-03);
+}
+
+.tarjeta:hover .play-tarjeta{
+  display:block;
 }
