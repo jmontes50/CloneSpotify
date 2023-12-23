@@ -39,6 +39,15 @@ h5{
   color:gray;
 }
 
+/* estilos barra de desplazamiento webkit */
+/* ::-webkit-scrollbar{
+  height: 10px;
+} */
+
+/* ::-webkit-scrollbar-track{
+  background: #1db954;
+} */
+
 .busquedas{
   padding:40px;
   display:flex;
