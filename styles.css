@@ -1,5 +1,6 @@
+/* Variables */
 :root {
-  ---primary-color: #1db954;
+  --primary-color: #1db954;
   --secondary-color-01: #000000;
   --secondary-color-02: #191414;
   --secondary-color-03: #ffffff;
