@@ -26,7 +26,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border: 1px solid red; */
+  border: 1px solid red;
 }
 /* estilos generales, selectores de etiqueta */
 body {
@@ -95,4 +95,22 @@ h5{
 
 .tarjeta:hover .play-tarjeta{
   display:block;
+}
+
+/* grid */
+.grid-explorar{
+  display:grid;
+  grid-template-columns: repeat(6, minmax(250px, 1fr));
+  grid-template-rows: repeat(2, 300px);
+  gap:20px;
+}
+
+.tarjeta-explora{
+  padding: 20px;
+  overflow: hidden; /* todo lo que sobre desaparece */
+}
+
+.img-tarjeta-explora{
+  width:150px;
+  transform: translate(120px, 120px) rotate(30deg);
 }
